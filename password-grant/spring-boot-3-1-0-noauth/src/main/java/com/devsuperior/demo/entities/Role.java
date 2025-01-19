@@ -3,12 +3,14 @@ package com.devsuperior.demo.entities;
 import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "tb_role")
-public class Role {
+public class Role implements GrantedAuthority{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,8 +26,6 @@ public class Role {
     }
 
 
-
-
     public Long getId() {
         return id;
     }
@@ -34,6 +34,7 @@ public class Role {
         this.id = id;
     }
 
+    @Override
     public String getAuthority() {
         return authority;
     }
