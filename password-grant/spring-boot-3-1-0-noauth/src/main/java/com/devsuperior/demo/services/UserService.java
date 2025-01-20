@@ -4,7 +4,7 @@ import com.devsuperior.demo.entities.Role;
 import com.devsuperior.demo.entities.User;
 import com.devsuperior.demo.repositories.UserRepository;
 import com.devsuperior.demo.repositories.projections.UserDetailsProjection;
-import jakarta.persistence.Entity;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
